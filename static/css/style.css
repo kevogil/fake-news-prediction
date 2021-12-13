@@ -1,0 +1,6 @@
+.card-body .active {
+    border-color: #252527;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+}
