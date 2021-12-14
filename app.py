@@ -35,12 +35,12 @@ def visuals():
     return render_template("visuals.html")
 
 # Define what to do when a user hits the /model route
-@app.route("/model") #, methods=['POST', 'GET']
-def model():
+@app.route("/form") #, methods=['POST', 'GET']
+def form():
     #if request.method == "POST":
         #search_content = request.form['predictfakenews']
     #else: 
-    return render_template("model.html")
+    return render_template("form.html")
 
 # Run app
 if __name__ == "__main__":
