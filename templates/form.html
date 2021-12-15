@@ -46,18 +46,19 @@
     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
   </div>
 </div>
-<form action="/form" method="POST">
+<form action="/send" method="POST" name="form">
     <div class="container mt-5">
     <div class="row">
     <div class="col-sm-11">
         <div class="form-group">
             <label for="predictfakenews">Search to predict if the news is real or fake</label>
-            <textarea class="form-control" id="predictfakenews" rows="3"></textarea>
+            <input type="textarea" class="form-control" id="predictfakenews" name="predictfakenews" rows="3"></textarea>
           </div>
           <br/>
           <button type="search" class="btn btn-primary">Search</button>
  </form>
 </div>
+<p>{{ model_result }}</p>
 </div>
 </div>
 </div>
