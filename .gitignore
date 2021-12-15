@@ -1,8 +1,8 @@
+# Files
 *.csv
-.gitignore
-LICENSE
+*.pyc
+
+
+# Folders
 .ipynb_checkpoints/
-
-*pyc
-
 __pycache__/
