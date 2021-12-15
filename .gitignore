@@ -1,2 +1,4 @@
-# Ignore large datasets
 *.csv
+.gitignore
+LICENSE
+.ipynb_checkpoints/
