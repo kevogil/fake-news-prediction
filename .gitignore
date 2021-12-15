@@ -1,0 +1,9 @@
+# Files
+*.csv
+*.pyc
+.gitignore
+
+
+# Folders
+.ipynb_checkpoints/
+__pycache__/
