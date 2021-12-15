@@ -1,13 +1,53 @@
 # Import flask and other libraries
 #from models import create_classes
 import os
+
+import pickle
 from flask import (
     Flask,
     render_template,
     jsonify,
     request,
     redirect)
-#import pandas as pd
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from nltk import sent_tokenize, word_tokenize
+
+model_logistc = pickle.load(open("models/logistic_regression.sav", "rb"))
+
+#functions
+
+def lemmatize_sentence(text):
+    stop_words = stopwords.words('english')
+    lemmatizer = WordNetLemmatizer()
+    sentence = ""
+    
+    # Tokenization
+    words = nltk.word_tokenize(text)
+    # Stopwords removal
+    words = [w for w in words if not w in stop_words]
+    # Lemmatization
+    for word in words:
+        sentence = sentence + ' ' + str(lemmatizer.lemmatize(word)).lower()
+        
+    sentence = [sentence]
+        
+    return sentence
+
+def vectorize_sentence(sentence):
+    freq_term_matrix = count_vectorizer.transform(sentence)
+
+    tfidf = TfidfTransformer(norm = "l2")
+    tfidf.fit(freq_term_matrix)
+    tf_idf_matrix = tfidf.fit_transform(freq_term_matrix)
+    
+    return tf_idf_matrix
 
 #from sqlalchemy import create_engine
 #from flask_sqlalchemy import SQLAlchemy
@@ -34,13 +74,24 @@ def home():
 def visuals():
     return render_template("visuals.html")
 
-# Define what to do when a user hits the /model route
-@app.route("/form") #, methods=['POST', 'GET']
+@app.route("/form")
 def form():
-    #if request.method == "POST":
-        #search_content = request.form['predictfakenews']
-    #else: 
-    return render_template("form.html")
+    return render_template("form.html", model_result = " ")
+
+# Define what to do when a user hits the /model route
+@app.route("/send",  methods=['POST'])
+def send():
+    #print('hello')
+    new_text = request.form["predictfakenews"]
+    print(new_text)
+
+    vect_text = vectorize_sentence(lemmatize_sentence(new_text))
+
+    
+
+    result = "Fake"
+
+    return render_template("form.html", model_result = result)
 
 # Run app
 if __name__ == "__main__":
