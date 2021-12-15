@@ -1,0 +1,6 @@
+flask
+flask_sqlalchemy
+flask_migrate
+pandas
+psycopg2
+gunicorn
