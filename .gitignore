@@ -1,4 +1,8 @@
-# Ignore large datasets
 *.csv
+.gitignore
+LICENSE
+.ipynb_checkpoints/
 
-*.pyc
+*pyc
+
+__pycache__/
