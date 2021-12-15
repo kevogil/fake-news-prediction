@@ -1,2 +1,4 @@
 # Ignore large datasets
 *.csv
+
+*.pyc
