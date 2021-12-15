@@ -1,5 +1,4 @@
 # Import flask and other libraries
-#from models import create_classes
 import os
 
 import pickle
@@ -15,30 +14,33 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk import sent_tokenize, word_tokenize
 
-model_logistc = pickle.load(open("models/logistic_regression.sav", "rb"))
+model_logistic = pickle.load(open("models/logistic_regression.sav", "rb"))
+
+count_vectorizer = pickle.load(open("models/variables/count_vectorizer_var.sav", "rb"))
 
 #functions
+stop_words = stopwords.words('english')
+lemmatizer = WordNetLemmatizer()
 
 def lemmatize_sentence(text):
-    stop_words = stopwords.words('english')
-    lemmatizer = WordNetLemmatizer()
+
     sentence = ""
     
     # Tokenization
     words = nltk.word_tokenize(text)
     # Stopwords removal
-    words = [w for w in words if not w in stop_words]
+    words = [str(lemmatizer.lemmatize(w)).lower() for w in words if not w in stop_words]
     # Lemmatization
     for word in words:
         sentence = sentence + ' ' + str(lemmatizer.lemmatize(word)).lower()
         
-    sentence = [sentence]
-        
-    return sentence
+    return [sentence]
 
 def vectorize_sentence(sentence):
     freq_term_matrix = count_vectorizer.transform(sentence)
@@ -49,19 +51,8 @@ def vectorize_sentence(sentence):
     
     return tf_idf_matrix
 
-#from sqlalchemy import create_engine
-#from flask_sqlalchemy import SQLAlchemy
-
 # create instance of Flask app
 app = Flask(__name__)
-
-# Use flask_pymongo to set up mongo connection
-#app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URL', '').replace("postgres://", "postgresql://", 1)
-#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-#db = SQLAlchemy(app)
-
-#News = create_classes(db)
 
 # create route that renders index.html template
 @app.route("/")
@@ -84,14 +75,22 @@ def send():
     #print('hello')
     new_text = request.form["predictfakenews"]
     print(new_text)
-
-    vect_text = vectorize_sentence(lemmatize_sentence(new_text))
-
     
+    lemm_text = lemmatize_sentence(new_text)
 
-    result = "Fake"
-
+    vect_text = vectorize_sentence(lemm_text)
+    
+    print(vect_text)
+    #vectorize_sentence
+    result = model_logistic.predict(vect_text)
+    
+    if result[0] == 1:
+        result = "Real"
+    else:
+        result = "Fake"
+    
     return render_template("form.html", model_result = result)
+    
 
 # Run app
 if __name__ == "__main__":
