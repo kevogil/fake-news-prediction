@@ -43,7 +43,7 @@
   <div class="container mt-5">
     <div class="row">
     <div class="col-sm-12">
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <p>Due to the increased spread of fake news, detection of fake news is necessary now more than ever. In order to tackle the spread of fake news, this automatic detection form was created by using machine learning. Find out if the article you are reading is real or fake today!</p>
   </div>
 </div>
 <form action="/send" method="POST" name="form">
@@ -51,11 +51,11 @@
     <div class="row">
     <div class="col-sm-11">
         <div class="form-group">
-            <label for="predictfakenews">Search to predict if the news is real or fake</label>
-            <input type="textarea" class="form-control" id="predictfakenews" name="predictfakenews" rows="3"></textarea>
+            <label for="predictfakenews">Copy a paragraph from the article and paste here to detect if whether the news is real or fake:</label>
+            <textarea class="form-control" id="predictfakenews" name="predictfakenews" rows="4" cols="50"></textarea>
           </div>
           <br/>
-          <button type="search" class="btn btn-primary">Search</button>
+          <button type="verify" class="btn btn-primary">Verify</button>
  </form>
 </div>
 <p>{{ model_result }}</p>

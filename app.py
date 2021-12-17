@@ -70,7 +70,7 @@ def form():
     return render_template("form.html", model_result = " ")
 
 # Define what to do when a user hits the /model route
-@app.route("/send",  methods=['POST'])
+@app.route("/send",  methods=['POST', 'GET'])
 def send():
     #print('hello')
     new_text = request.form["predictfakenews"]
@@ -89,8 +89,8 @@ def send():
     else:
         result = "Fake"
     
-    return render_template("form.html", model_result = result)
-    
+    return render_template("result.html", model_result = result, new_text = new_text) 
+  
 
 # Run app
 if __name__ == "__main__":
