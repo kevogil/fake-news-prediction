@@ -16,6 +16,7 @@ from sklearn.linear_model import LogisticRegression
 import nltk
 nltk.download('punkt')
 nltk.download('wordnet')
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk import sent_tokenize, word_tokenize
