@@ -29,8 +29,14 @@ The following data cleaning steps were taken:
 Logistic Regression was used to train our machine learning model.
 The training data yielded in an accuracy score of 99.5%.
 The testing data yielded in an accuracy score of 99.1%.
+<p align="center">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/conf_matrix.png">
+</p>
 
 ## Bar Chart
 Our dataset could be classified into three main topics - Politics, World News, and U.S. News.
 A majority of our training data consisted of news topics related to politics.
 Understanding this, the confidence of the model returning an accurate prediction on non-political news is not great.
+<p align="center">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/bar_chart.png">
+</p>
