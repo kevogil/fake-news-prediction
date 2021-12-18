@@ -31,7 +31,7 @@ The following data cleaning steps were taken:
   <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/ml_summary.png">
 </p>
 
-#### <u>Logistic Regression</u>
+#### Logistic Regression
 A logistic regression was the first model used, being a classification algorithm used to predict a discrete set of classes/categories (e.g., Yes/No, Young/Old, Happy/Sad). In our case, the discrete classes of fake and real news were mapped to a value of 0 and 1 respectively.
 
 #### Decision Tree
@@ -42,9 +42,11 @@ A classification model that determines the probability of <b>A</b> happening, gi
 The assumption is that the predictors/features are independent of one another, hence the term "naive".
 The features/predictors used in this model was based off the frequency of words present in a given news article.
 
+
 After testing all three models, it was clear that the decision tree classification model was more accurate, but only by a margin.
 We were surprised at the accuracy of logistic regression, considering it being a more simpler model.
 Ultimately, the slight increase in accuracy of decision trees did not justify the more complex modeling, and so we decided to stick with logistic regression for our machine learning model of choice.
+
 
 
 ## Visualizations
