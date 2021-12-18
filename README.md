@@ -19,6 +19,7 @@ The following data cleaning steps were taken:
 4. Create a new column called `combined_text` that concatenates the `title` and `text` columns
 5. Pre-processing:
     - Cleaned text data from `combined_text` using regex (regular expressions)
+    - Removed stop words (commonly used words in the English language, i.e. "a", "the", "is", "are")
     - Tokenized the text (splitting a sentence into individual words)
     - Lemmatized each word (removing inflections and grouping words by their lemma)
 
@@ -50,7 +51,9 @@ Interestingly, news articles related to Obama and Clinton had a higher distribut
 </p>
 
 ### Word Cloud
-
+Our initial dataset consisted of 10,607,577 words across all of the news articles combined.
+After pre-processing our data from removing stop words and lemmatization, our final dataset consisted of 214,805 unique words.
+The following word cloud was a visual depiction of all of the unique words trained into our model, varying in size depending on the frequency they showed up across all trained news articles.
 <p align="center">
   <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/word_cloud.png", width="500", height="500">
 </p>
