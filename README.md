@@ -24,6 +24,12 @@ The following data cleaning steps were taken:
     - Lemmatized each word (removing inflections and grouping words by their lemma)
 
 
+## Modeling
+<p align="center">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/ml_summary.png">
+</p>
+
+
 ## Visualizations
 
 ### Confusion Matrix
