@@ -1,5 +1,12 @@
 # Fake News Prediction
 
+## Background
+Social media and all it wonders has not only brought humanity together in a new and innovative way, but has also brought the rise of fake news for various purposes, from political to commercial and many other sectors. Fake news can misinform individuals and communities as a whole, persuading them to make decisions based on lies and deceit.
+
+The spread of fake news is a major problem in society today and detecting such fake news is vital. How can we detect fake news you ask? With machine learning.
+
+
+
 ## Dataset
 The dataset used to train our machine learning model was obtained from Kaggle, consisting of news articles and posted between 2015-2018.
 Two sets of data were used, one consisting of all fake news, and another of all real news.
@@ -85,5 +92,12 @@ The following word cloud was a visual depiction of all of the unique words train
 
 
 ## Identify Fake News
-Try it yourself!
-Navigate to the <a href="https://3i2b9gpxzr.us-west-2.awsapprunner.com/form">"Identify Fake and Real News"</a> Page
+Try it yourself!<br>
+Navigate to the <a href="https://3i2b9gpxzr.us-west-2.awsapprunner.com/form">Identify Fake and Real News</a> Page
+<p align="center">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/090396755f27c8e0cfc82412045fe015ac113d35/static/images/screenshots/form.png">
+</p>
+<br>
+<p align="center">
+    Find the latest politics news you've read or heard, paste it into the text box, and hit Verify!
+</p>
