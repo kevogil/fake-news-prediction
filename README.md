@@ -28,7 +28,7 @@ The following data cleaning steps were taken:
 
 ## Modeling
 <p align="center">
-  <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/screenshots/ml_summary.png">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/4702295184e622e676b2e0690c3ab9e8146ffa6a/static/images/screenshots/ml_summary.png">
 </p>
 
 #### Logistic Regression
