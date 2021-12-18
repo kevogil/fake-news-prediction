@@ -76,23 +76,52 @@
       <p>The spread of fake news is a major problem in society today and detecting such fake news is vital. How can we detect fake news you ask? With Machine Learning.</p>
       <p>As defined in <a href="https://www.geeksforgeeks.org/ml-machine-learning/">GeeksforGeeks</a>, Machine Learning (ML) is the field of study that gives computers the capability to learn without being explicitly programmed. The process begins with importing good quality data and then training the machines (computers) by building ML models using the data and various algorithms in order to make predictions or decisions. ML algorithms are used in a wide variety of applications, such as fraud detection, email filtering, assessing a patient’s health in real time, and personalizing a shopping experience, just to name a few.</p>
       <p>Thus, for purposes of detecting fake news from real news, we used ML algorithms to help predict fake news from real news. Join us on this journey to help identify fake news. </p>
+      
       <h2 class="mt-5">Machine Learning Implementation</h2>
+      <br/>
       <h5>Data Description</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <h5>Data Transformation</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <div class=""></div>
+      <p>The dataset used to train our machine learning model was obtained from <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset">Kaggle</a>, consisting of news articles posted between 2015-2018. Two sets of data in .CSV form were used, one consisting of fake news, and another of real news. The overall format and columns were the same across both datasets.</p>
+      <p>The datasets consisted of the following fields: title, text, subject, and date.</p>
+      
+      <h5>Data Cleaning</h5>
+      <p>In order to prepare the datasets for the machine learning models, the following data cleaning steps were taken:</p>
+      <ol>
+        <li>Replace any empty strings with NaN.</li>
+        <li>Add a binary column to each dataset, identifying the news articles as either being fake or real (0 = fake, 1 = real).</li>
+        <li>Append datasets into one dataframe.</li>
+        <li>Create a new column called combined_text that concatenates the title and text columns.</li>
+        <li>Pre-processing by using the Natural Language Toolkit (NLTK):</li>
+            <ol type="i">
+              <li>Cleaned text data from combined_text using regex (regular expressions).</li>
+              <li>Removed stop words (commonly used words in the English language, i.e. "a", "the", "is", "are").</li>
+              <li>Tokenized the text (splitting a sentence into individual words).</li>
+              <li>Lemmatized each word (removing inflections and grouping words by their lemma).</li>
+            </ol>     
+      </ol>
+      <div class=""><img src="../static/images/screenshots/data_cleaning.png" alt="DataCleaning" width=100%></div>
+      <br/>
       <h5>Machine Learning Model</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      
+      <p><strong>Logistic Regression</strong></p>
+      <p>A logistic regression was the first model used, being a classification algorithm used to predict a discrete set of classes/categories (e.g. Yes/No, Young/Old, Happy/Sad). In our case, the discrete classes of fake and real news were mapped to a value of 0 and 1 respectively.</p>
+      <div class=""><img src="../static/images/screenshots/logistic_regression1.png" alt="LogisticRegression1" width=100%></div>
+      <div class=""><img src="../static/images/screenshots/logistic_regression2.png" alt="LogisticRegression2" width=100%></div>
+      <br/>
+      <p><strong>Decision Tree</strong></p>
+      <p>A decision tree classification model was our second model used. The initial idea was that a decision tree might be a better fit for our model due to our data points not being easily separable. The flexibility of decision trees gave us our initial hypothesis that it would provide a higher accuracy score compared to a logistic regression model.</p>
+      <div class=""><img src="../static/images/screenshots/decision_tree.png" alt="DecisionTree" width=100%></div>
+      <br/>
+      <p><strong>Multinomial Naive Bayes</strong></p>
+      <p>A classification model that determines the probability of ‘A’ happening, given that ‘B’ has occurred. The assumption is that the predictors/features are independent of one another, hence the term "naive". The features/predictors used in this model were based on the frequency of words present in a given news article.</p>
+      <div class=""><img src="../static/images/screenshots/naive_bayes.png" alt="NaiveBayes" width=100%></div>
+
+      <br/>
       <h5>Outcome</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>After testing all three models, it was clear that the decision tree classification model was more accurate, but only by a margin. We were surprised at the accuracy of logistic regression, considering it being a more simple model. Ultimately, the slight increase in accuracy of decision trees did not justify the more complex modeling, and so we decided to stick with logistic regression for our machine learning model of choice.</p>
+      <div class=""><img src="../static/images/screenshots/ml_summary.png" alt="MLSummary" width=40%></div>
+      <br/>
+      <p>We invite you to test our model by completing the <a href="/form">Identify Fake News</a> form. Find the latest politics news you've read or heard, paste it into the text box, and hit Verify!</p>
     </div>
   </div>
 </div>
