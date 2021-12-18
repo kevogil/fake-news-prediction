@@ -11,6 +11,7 @@ The data consisted of the following fields:<br>
 <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset">Link to dataset</a>
 
 
+
 ## Data Cleaning
 The following data cleaning steps were taken:
 1. Replace any empty strings with NaN
@@ -24,6 +25,7 @@ The following data cleaning steps were taken:
     - Lemmatized each word (removing inflections and grouping words by their lemma)
 
 
+
 ## Modeling
 <p align="center">
   <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/ml_summary.png">
@@ -33,6 +35,7 @@ The following data cleaning steps were taken:
 A classification model that determines the probability of <b>A</b> happening, given that <b>B</b> has occurred.
 The assumption is that the predictors/features are independent of one another, hence the term "naive".
 The features/predictors used in this model was based off the frequency of words present in a given news article.
+
 
 
 ## Visualizations
