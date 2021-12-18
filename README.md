@@ -33,10 +33,24 @@ The testing data yielded in an accuracy score of 99.1%.
   <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/conf_matrix.png">
 </p>
 
-## Bar Chart
+### Bar Chart
 Our dataset could be classified into three main topics - Politics, World News, and U.S. News.
 A majority of our training data consisted of news topics related to politics.
 Understanding this, the confidence of the model returning an accurate prediction on non-political news is not great.
 <p align="center">
   <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/bar_chart.png">
+</p>
+
+### Stacked Bar Chart
+We were interested in looking at the top words that showed up in our dataset, as well as what the distribution of the words being found in fake and real news looked like.
+The top words were mainly related to U.S. presidents, most notably Donald Trump.
+Interestingly, news articles related to Obama and Clinton had a higher distribution of fake news compared to Donald Trump.
+<p align="center">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/stacked_bar.png">
+</p>
+
+### Word Cloud
+
+<p align="center">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/word_cloud.png", width="500", height="500">
 </p>
