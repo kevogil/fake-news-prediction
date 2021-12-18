@@ -91,5 +91,6 @@ Navigate to the <a href="https://3i2b9gpxzr.us-west-2.awsapprunner.com/form">"Id
   <img src="https://github.com/kevogil/fake-news-prediction/blob/090396755f27c8e0cfc82412045fe015ac113d35/static/images/screenshots/form.png">
 </p>
 <br>
-Find the latest politics news you've read or heard, and paste it into the text box.
-All that's left to do is verify!
+<p align="center">
+    Find the latest politics news you've read or heard, paste it into the text box, and hit Verify!
+</p>
