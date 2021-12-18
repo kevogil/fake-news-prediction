@@ -31,7 +31,7 @@ The following data cleaning steps were taken:
   <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/ml_summary.png">
 </p>
 
-#### Logistic Regression
+#### <u>Logistic Regression</u>
 A logistic regression was the first model used, being a classification algorithm used to predict a discrete set of classes/categories (e.g., Yes/No, Young/Old, Happy/Sad). In our case, the discrete classes of fake and real news were mapped to a value of 0 and 1 respectively.
 
 #### Decision Tree
