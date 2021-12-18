@@ -53,7 +53,7 @@ We were interested in looking at the top words that showed up in our dataset, as
 The top words were mainly related to U.S. presidents, most notably Donald Trump.
 Interestingly, news articles related to Obama and Clinton had a higher distribution of fake news compared to Donald Trump.
 <p align="center">
-  <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/stacked_bar.png">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/e1ac83ee95db5346d213fe21630fc985608df403/static/images/stacked_bar.png">
 </p>
 
 ### Word Cloud
