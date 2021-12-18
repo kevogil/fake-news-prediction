@@ -93,7 +93,7 @@ The following word cloud was a visual depiction of all of the unique words train
 
 ## Identify Fake News
 Try it yourself!<br>
-Navigate to the <a href="https://3i2b9gpxzr.us-west-2.awsapprunner.com/form">"Identify Fake and Real News"</a> Page
+Navigate to the <a href="https://3i2b9gpxzr.us-west-2.awsapprunner.com/form">Identify Fake and Real News</a> Page
 <p align="center">
   <img src="https://github.com/kevogil/fake-news-prediction/blob/090396755f27c8e0cfc82412045fe015ac113d35/static/images/screenshots/form.png">
 </p>
