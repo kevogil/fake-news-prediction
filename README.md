@@ -28,7 +28,7 @@ The following data cleaning steps were taken:
 
 ## Modeling
 <p align="center">
-  <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/ml_summary.png">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/screenshots/ml_summary.png">
 </p>
 
 #### Logistic Regression
@@ -81,3 +81,9 @@ The following word cloud was a visual depiction of all of the unique words train
 <p align="center">
   <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/word_cloud.png", width="500", height="500">
 </p>
+
+
+
+## Identify Fake News
+Try it yourself!
+Navigate to the <a href="https://3i2b9gpxzr.us-west-2.awsapprunner.com/form">"Identify Fake and Real News"</a> Page
