@@ -1,4 +1,4 @@
-# Political Fake News Prediction
+# Fake News Prediction
 
 ## Background
 Social media and all it wonders has not only brought humanity together in a new and innovative way, but has also brought the rise of fake news for various purposes, from political to commercial and many other sectors. Fake news can misinform individuals and communities as a whole, persuading them to make decisions based on lies and deceit.
