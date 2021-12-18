@@ -32,15 +32,19 @@ The following data cleaning steps were taken:
 </p>
 
 #### Logistic Regression
-A logistic regression was the first model we tried, being a classification algorithm used to predict a discrete set of classes/categories (e.g., Yes/No, Young/Old, Happy/Sad). In our case, the discrete classes of fake and real news were mapped to a value of 0 and 1 respectively. The result after fitting the logistic regression model was an accuracy score of 99%.
+A logistic regression was the first model used, being a classification algorithm used to predict a discrete set of classes/categories (e.g., Yes/No, Young/Old, Happy/Sad). In our case, the discrete classes of fake and real news were mapped to a value of 0 and 1 respectively.
 
 #### Decision Tree
+A decision tree classification model was our second model used. The initial idea was that a decision tree might be a better fit for our model due to our data points not being easily separable. The flexibility of decision trees gave us our initial hypothesis that it would provide a higher accuracy score compared to a logistic regression model.
 
 #### Multinomial Naive Bayes
 A classification model that determines the probability of <b>A</b> happening, given that <b>B</b> has occurred.
 The assumption is that the predictors/features are independent of one another, hence the term "naive".
 The features/predictors used in this model was based off the frequency of words present in a given news article.
 
+After testing all three models, it was clear that the decision tree classification model was more accurate, but only by a margin.
+We were surprised at the accuracy of logistic regression, considering it being a more simpler model.
+Ultimately, the slight increase in accuracy of decision trees did not justify the more complex modeling, and so we decided to stick with logistic regression for our machine learning model of choice.
 
 
 ## Visualizations
