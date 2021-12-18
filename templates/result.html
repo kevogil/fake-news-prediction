@@ -19,16 +19,22 @@
 <br/>
 <br/>
 <br/>
-<h1><strong>News Verified!</strong></h1>
-</div>
+  {% if model_result == "Real" %}
+    <div class="model_result">
+      <h2>News Verified! The news is “<strong>{{ model_result }}</strong>!”</h2>
+  </div>
+  {% else %}
+    <div class="model_result">
+      <h2>Don’t believe everything you read! The news is “<strong>{{ model_result }}</strong>!”</h2>
+  </div>
+  {% endif %}
+
 <div class="container mt-5">
     <div class="row">
       <div class="col-sm-12">
         <h3>Your Input</h3>
         <p>{{ new_text }}</p>
         
-        <h3>Results</h3>
-        <h5>The news is "{{ model_result }}"!</h5>
       </div>
       <div class="container mt-5">
       <a href="/form" class="btn btn-primary">Return to Previous Page</a>
@@ -36,6 +42,13 @@
   </div> 
 </div>
 </div> 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
