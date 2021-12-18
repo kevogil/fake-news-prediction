@@ -11,6 +11,7 @@ The data consisted of the following fields:<br>
 <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset">Link to dataset</a>
 
 
+
 ## Data Cleaning
 The following data cleaning steps were taken:
 1. Replace any empty strings with NaN
@@ -24,10 +25,27 @@ The following data cleaning steps were taken:
     - Lemmatized each word (removing inflections and grouping words by their lemma)
 
 
+
 ## Modeling
 <p align="center">
-  <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/ml_summary.png">
+  <img src="https://github.com/kevogil/fake-news-prediction/blob/b81944321bf893a4a6958a64305c6cadd3220a99/static/images/screenshots/ml_summary.png">
 </p>
+
+#### Logistic Regression
+A logistic regression was the first model used, being a classification algorithm used to predict a discrete set of classes/categories (e.g., Yes/No, Young/Old, Happy/Sad). In our case, the discrete classes of fake and real news were mapped to a value of 0 and 1 respectively.
+
+#### Decision Tree
+A decision tree classification model was our second model used. The initial idea was that a decision tree might be a better fit for our model due to our data points not being easily separable. The flexibility of decision trees gave us our initial hypothesis that it would provide a higher accuracy score compared to a logistic regression model.
+
+#### Multinomial Naive Bayes
+A classification model that determines the probability of <b>A</b> happening, given that <b>B</b> has occurred.
+The assumption is that the predictors/features are independent of one another, hence the term "naive".
+The features/predictors used in this model was based off the frequency of words present in a given news article.
+<br><br>
+After testing all three models, it was clear that the decision tree classification model was more accurate, but only by a margin.
+We were surprised at the accuracy of logistic regression, considering it being a more simpler model.
+Ultimately, the slight increase in accuracy of decision trees did not justify the more complex modeling, and so we decided to stick with logistic regression for our machine learning model of choice.
+
 
 
 ## Visualizations
@@ -63,3 +81,9 @@ The following word cloud was a visual depiction of all of the unique words train
 <p align="center">
   <img src="https://github.com/kevogil/fake-news-prediction/blob/720e122b2b890e01137c301a6a5413f69c2e6dd9/static/images/word_cloud.png", width="500", height="500">
 </p>
+
+
+
+## Identify Fake News
+Try it yourself!
+Navigate to the <a href="https://3i2b9gpxzr.us-west-2.awsapprunner.com/form">"Identify Fake and Real News"</a> Page
