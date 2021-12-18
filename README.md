@@ -2,8 +2,7 @@
 
 ## Dataset
 The dataset used to train our machine learning model was obtained from Kaggle, consisting of news articles and posted between 2015-2018.
-
-Two sets of data were provided, one consisting of all fake news, and another of all real news.
+Two sets of data were used, one consisting of all fake news, and another of all real news.
 The overall format and columns were the same across both datasets.
 
 The data consisted of the following fields:<br>
