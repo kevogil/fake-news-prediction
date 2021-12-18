@@ -41,7 +41,7 @@ A decision tree classification model was our second model used. The initial idea
 A classification model that determines the probability of <b>A</b> happening, given that <b>B</b> has occurred.
 The assumption is that the predictors/features are independent of one another, hence the term "naive".
 The features/predictors used in this model was based off the frequency of words present in a given news article.
-<br>
+<br><br>
 After testing all three models, it was clear that the decision tree classification model was more accurate, but only by a margin.
 We were surprised at the accuracy of logistic regression, considering it being a more simpler model.
 Ultimately, the slight increase in accuracy of decision trees did not justify the more complex modeling, and so we decided to stick with logistic regression for our machine learning model of choice.
