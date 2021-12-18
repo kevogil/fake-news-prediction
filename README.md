@@ -1,5 +1,12 @@
 # Fake News Prediction
 
+## Background
+Social media and all it wonders has not only brought humanity together in a new and innovative way, but has also brought the rise of fake news for various purposes, from political to commercial and many other sectors. Fake news can misinform individuals and communities as a whole, persuading them to make decisions based on lies and deceit.
+
+The spread of fake news is a major problem in society today and detecting such fake news is vital. How can we detect fake news you ask? With Machine Learning.
+
+
+
 ## Dataset
 The dataset used to train our machine learning model was obtained from Kaggle, consisting of news articles and posted between 2015-2018.
 Two sets of data were used, one consisting of all fake news, and another of all real news.
